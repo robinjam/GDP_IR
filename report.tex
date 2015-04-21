@@ -9,7 +9,7 @@
 
 \begin{document}
 
-  \title{GDP Individual Report}
+  \title{An analysis of Public Cloud service providers}
   \author{James Robinson\\\texttt{jr4e09@soton.ac.uk}}
   \maketitle
 
@@ -22,9 +22,13 @@
 
   \section{The importance of the idea}
 
-  % What is cloud computing and why is it important?
-  % What is the distinction between public, private and hybrid clouds, and which are we talking about here?
-  % What are IaaS and PaaS and why are they useful?
+  Cloud computing is ``a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction'' \cite{Mell2011}. In essence, it is a tool that allows users to automatically provision computing resources on an on-demand basis, without having to manage the underlying infrastructure.
+
+  The most fundamental type of cloud computing service is known as \emph{Infrastructure as a Service}, or IaaS. IaaS providers offer servers (either physical or virtual) on an on-demand basis, usually charging a fixed price per unit of time the server is used. IaaS providers frequently complement these servers with additional services such as block storage (e.g. virtual disks), object storage (e.g. key-value stores), load balancing, or additional IP addresses, again charging a fixed sum per unit of time the additional services are used. IaaS services are extremely valuable because they abstract away the physical infrastructure (servers, switches, routers, etc.), allow servers to be dynamically provisioned and de-provisioned to meet demand in real-time, and replace the large initial investment for the purchase of physical hardware with smaller incremental payments based on usage.
+
+  A higher-level cloud computing model is known as \emph{Platform as a Service}, or PaaS. PaaS providers offer complete platforms for the deployment of applications, and automatically manage the provisioning of the underlying infrastructure on behalf of the application. This complete platform typically consists of an operating system, a runtime environment for one or more programming languages, libraries, a database server, one or more web servers and a load balancer. PaaS services are extremely valuable because they allow application developers to deploy their application without having to worry about provisioning and maintaining the underlying infrastructure or the software used to host the application.
+
+  Cloud computing can employ a number of different \emph{deployment models} (see figure~\ref{fig:cloud_computing_types}), determined by the entity that owns, controls or manages the underlying hardware \cite{Mell2011}. A \emph{public cloud} service is any cloud service that is provisioned for open use by the general public, regardless of which entity owns or manages it. Due to space constraints, only these services will be considered in this article.
 
   \begin{figure}
     \centering
@@ -33,9 +37,9 @@
     \label{fig:cloud_computing_types}
   \end{figure}
 
-  The most fundamental type of cloud computing service is known as \emph{Infrastructure as a Service}, or IaaS. IaaS providers offer servers (either physical or virtual) on an on-demand basis, usually charging a fixed price per unit of time the server is used. IaaS providers frequently complement these servers with additional services such as block storage (e.g. virtual disks), object storage (e.g. key-value stores), load balancing, or additional IP addresses, again charging a fixed sum per unit of time the additional services are used. IaaS services are extremely valuable because they abstract away the physical infrastructure (servers, switches, routers, etc.), allow servers to be dynamically provisioned and de-provisioned to meet demand in real-time, and replace the large initial investment for the purchase of physical hardware with smaller incremental payments based on usage.
+  Many IaaS providers also offer PaaS services built upon their own infrastructure. An example of such a service is Amazon Web Services (AWS), which provides IaaS in the form of virtual servers (EC2), block storage (EBS), object storage (S3), relational databases (RDS) and load balancing (CloudFront), along with a PaaS (Elastic Beanstalk) that automatically provisions and manages the aforementioned resources as required to run a particular web application. Various languages are supported, including Ruby, PHP, Python, Java and Node.js, but additional fees are incurred for deployment of applications built within Microsoft's software ecosystem, due to licensing requirements. A competitor is Microsoft Azure, which provides both IaaS and PaaS services primarily for applications built upon Microsoft's ecosystem (for example, .NET applications).
 
-  A higher-level cloud computing model is known as \emph{Platform as a Service}, or PaaS. PaaS providers offer complete platforms for the deployment of applications, and automatically manage the provisioning of the underlying infrastructure on behalf of the application. This complete platform typically consists of an operating system, a runtime environment for one or more programming languages, a database server, one or more web servers and a load balancer. PaaS services are extremely valuable because they allow application developers to deploy their application without having to worry about provisioning and maintaining the underlying infrastructure or the software used to host the application.
+  Some popular PaaS-only services include Heroku, Red Hat OpenShift, Google App Engine, and Engine Yard. Each of these services can provision and manage the services required to run applications in various popular development ecosystems including PHP, Rails (and other Rack frameworks), Django and Node.js.
 
   % Identify a technology market sector and identify the key players that operate in it.
   %    Market sector: public cloud computing service providers (not software, not private cloud)
