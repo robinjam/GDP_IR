@@ -1,8 +1,11 @@
 \documentclass[a4paper]{proc}
 
 \usepackage{biblatex}
+\usepackage{graphicx}
 
 \addbibresource{references.bib}
+
+\renewcommand*{\bibfont}{\raggedright}
 
 \begin{document}
 
@@ -22,6 +25,13 @@
   % What is cloud computing and why is it important?
   % What is the distinction between public, private and hybrid clouds, and which are we talking about here?
   % What are IaaS and PaaS and why are they useful?
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{Cloud_computing_types.eps}
+    \caption{Diagram showing three main types of cloud computing (public/external, hybrid, private/internal) \cite{Joton2009}}
+    \label{fig:cloud_computing_types}
+  \end{figure}
 
   The most fundamental type of cloud computing service is known as \emph{Infrastructure as a Service}, or IaaS. IaaS providers offer servers (either physical or virtual) on an on-demand basis, usually charging a fixed price per unit of time the server is used. IaaS providers frequently complement these servers with additional services such as block storage (e.g. virtual disks), object storage (e.g. key-value stores), load balancing, or additional IP addresses, again charging a fixed sum per unit of time the additional services are used. IaaS services are extremely valuable because they abstract away the physical infrastructure (servers, switches, routers, etc.), allow servers to be dynamically provisioned and de-provisioned to meet demand in real-time, and replace the large initial investment for the purchase of physical hardware with smaller incremental payments based on usage.
 
@@ -86,7 +96,6 @@
 
   \section{Conclusion}
 
-  \section*{References}
   \printbibliography
 
 \end{document}
