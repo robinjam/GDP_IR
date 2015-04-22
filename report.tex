@@ -82,9 +82,17 @@
   % Look for examples where companies haven’t survived and maybe should have.
   % Likewise look for examples of companies who are implementing survival strategies
 
-  % Managed services vs self-service
-  % Brand loyalty/Customer support and customer satisfaction
-  % Free tier to entice new users
+  In order to determine what allows cloud computing providers to survive, it is useful to first consider companies that have failed, and learn from their mistakes. Nirvanix, a cloud storage provider similar to Amazon S3, managed to secure over \$70m in investment since its foundation. It was led by an extremely experienced management team, and boasted more than 1,200 customers in mid 2012. In October 2011, the company entered into a strategic partnership with IBM Global Services. Despite all this financial backing, the company filed for bankruptcy in October 2013. \textcite{Robinson2013} cites 3 primary causes for the company's failure:
+
+  \begin{enumerate}
+    \item They charged a flat rate per gigabyte-month for storage, but had to pay inordinate amounts of money for the infrastructure to support the survice. This business model is extremely difficult to support at scale without relying on third-party IaaS providers, especially for a startup.
+    \item They didn't own any significant intellectual property rights in their sector; instead, the company's business model relied on its ability to scale to fit the size of the target market, but the price consumers were willing to pay was not enough to sustain the infrastructure.
+    \item They didn't branch out into other cloud computing sectors. Competing products like Amazon S3 are popular because they form part of a wider ecosystem, usually providing object storage for applications hosted on Amazon's own EC2 service. Nirvanix provided cloud storage, and nothing else.
+  \end{enumerate}
+
+  From this we can infer that a successful cloud computing startup must either outsource infrastructure (for example, by relying on other IaaS proviers for physical infrastructure), or have an enormous amount of pre-existing capital to maintain their own infrastructure. We can also infer that it is useful to branch out into other sectors, for example providing full PaaS offerings instead of merely object storage.
+
+  Companies may also attempt to ensure customer loyalty by providing fast, high-quality technical support. Engine Yard boast of having technical advisors on standby every hour of every day. A free usage tier is often useful for enticing new customers to a product, which is important for a company's longevity. Amazon Web Services offer a limited, one-year free usage tier to introduce new customers to their services, and Heroku offer one free web server per application indefinitely. Such offers are useful for establishing and maintaining a large customer base.
 
   \section{Other issues}
   \label{sec:other}
